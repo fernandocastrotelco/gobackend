@@ -62,10 +62,9 @@ func (u *UserListProxy) addUserToStack(user User) {
 	}
 }
 
-//FindUser will search for the specified name in the parameter in the cache
-//list. If it finds it, it will return it. If not, it will search in the heavy
-//list. Finally, if it's not in the heavy list, it will return an error
-//(generated from the heavy list)
+// FindUser va a buscar un usuario en la cache por el id indicado por parametro
+// si no lo encuentra en la cache lo busca en la lista grande q simula una base
+// de datos. si no lo encuentra ahi devuelve un error
 func (u *UserListProxy) FindUser(id int32) (User, error) {
 	//Search for the object in the cache list first
 	user, err := u.StackCache.FindUser(id)
