@@ -7,7 +7,6 @@ import (
 	"github.com/fernandocastrotelco/gobackend/inventory/inventory-service/database"
 	"github.com/fernandocastrotelco/gobackend/inventory/inventory-service/product"
 	"github.com/fernandocastrotelco/gobackend/inventory/inventory-service/receipt"
-	_ "github.com/go-sql-driver/mysql"
 )
 
 const basePath = "/api"
